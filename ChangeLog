@@ -1,9 +1,13 @@
-2003-06-02  Deepayan Sarkar  <deepayan@24-196-68-115.mad.wi.charter.com>
+
+
+
+
+2003-06-02  Deepayan Sarkar  <deepayan@stat.wisc.edu>
 
 	* R/em.algorithm.R, R/postprob.R, R/zzz.R, R/classes.R:
 	restructured classes and methods codes in various files
 
-2003-06-01  Deepayan Sarkar  <deepayan@24-196-68-115.mad.wi.charter.com>
+2003-06-01  Deepayan Sarkar  <deepayan@stat.wisc.edu>
 
 	* R/em.algorithm.R:
 	changed method dispatch of em so that data can be a matrix, not

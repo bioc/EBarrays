@@ -19,12 +19,8 @@
 ### Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
 ### MA 02111-1307, USA
 
-##require(methods) ## is this necessary post R 1.7.0 ?
 
 .First.lib <- function(lib, pkg) {
-    if (!require(Biobase))
-        cat(paste("Could not load Biobase. You will not be\n",
-                  "able to use exprSet objects.\n"))
     library.dynam(pkg, pkg, lib )
 }
 

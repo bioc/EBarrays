@@ -44,28 +44,57 @@ emfit(data,
     \code{family}. If omitted, defaults are calculated based on the
     \code{family}.
   }
-  \item{p.init}{ initial values of mixture probabilities. If omitted,
-    all hypotheses are initially taken as equally likely. }
+  \item{p.init}{
+    initial values of mixture probabilities. If omitted, all hypotheses
+    are initially taken as equally likely.
+  }
   \item{num.iter}{ number of EM iterations}
   \item{verbose}{ logical or numeric (0,1,2) indicating desired level of
     information printed for the user}
-  \item{trace}{ whther the result should have slots \code{thetaTrace}
-    and \code{probTrace}, matrices giving values for all iterations}
-  \item{optim.control}{ list passed unchanged to \code{\link{optim}} for
-    finer control}
+  \item{trace}{
+    whether the result should have slots \code{thetaTrace} and
+    \code{probTrace}, matrices giving values for all iterations
+  }
+  \item{optim.control}{
+    list passed unchanged to \code{\link{optim}} for finer control
+  }
 }
+
 \note{
-  \code{emfit} is actually a generic function, with methods for .
+  \code{emfit} is a generic function dispatched on the arguments
+  \code{data}, \code{family} and \code{hypotheses}.
 }
+
 \value{
-  an object of class ``ebarraysEmFit'', that can be summarized by
-  \code{show()} and used to generate posterior probabilities using
+  an object of formal class ``ebarraysEmFit'' with the following slots
+
+  \item{\code{family}}{
+    the \code{family} passed to \code{emfit}
+  }
+  \item{\code{hypotheses}}{
+    the \code{hypotheses} passed to \code{emfit}
+  }
+  \item{\code{thetaEst}}{
+    numeric vector holding the parameter estimates
+  }
+  \item{\code{probEst}}{
+    numeric vector holding estimates of the mixture probabilities
+  }
+  \item{\code{thetaTrace}}{
+    optional matrix holding intermediate values of \code{thetaEst}
+  }
+  \item{\code{probTrace}}{
+    optional matrix holding intermediate values of \code{probEst}
+  }
+
+  The \code{show()} method can be used to summarize the object.  It can
+  also be used to generate posterior probabilities using
   \code{\link{postprob}}
 }
 
 \references{
 
-  See UW Madison Biostatistics and Medical Informatics Technical Report
+  UW Madison Biostatistics and Medical Informatics Technical Report
   166, ``On parametric empirical Bayes methods for comparing multiple
   groups using replicated gene expression profiles,'' by
   C.M. Kendziorski, M.A. Newton, H. Lan, and M.N. Gould.  See

@@ -10,7 +10,7 @@ library(EBarrays)
 
 lnnb.sim <- function(mu10, sigmasq, tausq, pde, n, nr1, nr2)
 {
-    de <- sample(c(T, F), size = n, replace = T, prob = c(pde, 1 - pde))
+    de <- sample(c(TRUE, FALSE), size = n, replace = TRUE, prob = c(pde, 1 - pde))
     x <- matrix(NA, n, nr1)
     y <- matrix(NA, n, nr2)
     mu1 <- rnorm(n, mu10, sqrt(tausq))
