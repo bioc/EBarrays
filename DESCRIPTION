@@ -1,0 +1,9 @@
+Package: EBarrays
+Version: 1.0-16
+Date: 2004/02/25
+Title: Empirical Bayes for Microarrays
+Author:  Christina Kendziorski, Michael Newton and Deepayan Sarkar
+Maintainer: Deepayan Sarkar <deepayan@stat.wisc.edu>
+Description:  EBarrays provides tools for the analysis of replicated microarray data across multiple conditions.  
+Depends: R (>= 1.8.0), Biobase
+License: GPL Version 2.0 or later.

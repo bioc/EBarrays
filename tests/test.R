@@ -1,0 +1,4 @@
+library(EBarrays)
+demo(ebarrays)
+
+
