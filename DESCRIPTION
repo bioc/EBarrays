@@ -7,5 +7,4 @@ Maintainer: Deepayan Sarkar <deepayan@stat.wisc.edu>
 Description:  EBarrays provides tools for the analysis of replicated microarray data across multiple conditions.  
 Depends: R (>= 1.9.0), Biobase, lattice
 License: GPL Version 2.0 or later.
-ReleaseLevel: devel
 
