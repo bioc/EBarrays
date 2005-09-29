@@ -204,9 +204,9 @@ checkModel <- function(data, model = c("gamma", "lognormal"),
         ans <- 
             qqmath(~ log(means) | mean.ranks, distribution = qnorm, 
                    scales = list(relation = "free", draw = FALSE),
-                   panel = function(x, y, ...) {
-                       panel.qqmathline(y, distribution = qnorm)
-                       panel.qqmath(x, y, ...)
+                   panel = function(x, distribution, ...) {
+                       panel.qqmathline(x, distribution = distribution, ...)
+                       panel.qqmath(x, distribution = distribution, ...)
                    },
                    xlab = "log of Mean Expression",
                    ylab = "Quantiles of Standard Normal")
@@ -216,16 +216,16 @@ checkModel <- function(data, model = c("gamma", "lognormal"),
         ans <- 
             qqmath(~ means | mean.ranks, 
                    scales = list(relation = "free", draw = FALSE),
-                   prepanel = function(x, y, ...) {
-                       shape.gg <- (mean(y))^2 / var(y)
-                       xx <- qgamma(ppoints(length(y)), shape = shape.gg)
-                       list(xlim = range(xx), ylim = range(y))
+                   prepanel = function(x, ...) {
+                       shape.gg <- (mean(x))^2 / var(x)
+                       xx <- qgamma(ppoints(length(x)), shape = shape.gg)
+                       list(xlim = range(xx), ylim = range(x))
                    },
-                   panel = function(x, y, ...) {
-                       shape.gg <- (mean(y))^2 / var(y)
-                       xx <- qgamma(ppoints(length(y)), shape = shape.gg)
-                       panel.qqmathline(y, distribution = function(p) qgamma(p, shape = shape.gg))
-                       panel.qqmath(xx, y, ...)
+                   panel = function(x, y, distribution, ...) {
+                       shape.gg <- (mean(x))^2 / var(x)
+                       xx <- qgamma(ppoints(length(x)), shape = shape.gg)
+                       panel.qqmathline(x, distribution = function(p) qgamma(p, shape = shape.gg), ...)
+                       panel.qqmath(x, distribution = function(p) qgamma(p, shape = shape.gg), ...)
                    },
                    xlab = "Mean Expression",
                    ylab = "Quantiles of fitted Gamma distribution")
