@@ -1,5 +1,5 @@
 
-2003-06-02  Deepayan Sarkar  <deepayan@stat.wisc.edu>
+2005-09-28  Deepayan Sarkar  <deepayan@stat.wisc.edu>
 
         * R/plots.R: updated qqmath calls in accordance with changes 
         in lattice
