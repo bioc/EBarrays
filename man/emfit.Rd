@@ -105,10 +105,10 @@ emfit(data,
   \code{\link{ebPatterns}}, \code{\link{ebarraysFamily-class}}
 }
 \examples{
-data(eset) ## from Biobase
+data(sample.exprSet.1) ## from Biobase
 patterns <- ebPatterns(c("1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
                          "1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2"))
-gg.fit <- emfit(data = eset, family = "GG", hypotheses = patterns,
+gg.fit <- emfit(data = sample.exprSet.1, family = "GG", hypotheses = patterns,
                 verbose = TRUE)
 ##                theta.init = c(10, 1, 1), p.init = c(.99, .01))
 show(gg.fit)
