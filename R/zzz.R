@@ -1,5 +1,5 @@
 
-### Copyright 2003, Christina Kendziorski <kendzior@biostat.wisc.edu>,
+### Copyright 2003-2006, Christina Kendziorski <kendzior@biostat.wisc.edu>,
 ### Michael Newton <newton@biostat.wisc.edu> and Deepayan Sarkar
 ### <deepayan@stat.wisc.edu>
 ###
