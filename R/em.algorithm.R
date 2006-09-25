@@ -69,6 +69,22 @@ setMethod("emfit",
 
           })
 
+setMethod("emfit",
+          signature(data = "ExpressionSet",
+                    family = "character",
+                    hypotheses = "ebarraysPatterns"),
+
+          function(data,
+                   family,
+                   hypotheses, ...) {
+
+              data <- exprs(data)
+              family <- as(family, "ebarraysFamily")
+              callGeneric(data = data,
+                          family = family,
+                          hypotheses = hypotheses, ...)
+
+          })
 
 
 setMethod("emfit",
@@ -91,6 +107,23 @@ setMethod("emfit",
 
 setMethod("emfit",
           signature(data = "exprSet",
+                    family = "ebarraysFamily",
+                    hypotheses = "ebarraysPatterns"),
+
+          function(data,
+                   family,
+                   hypotheses, ...) {
+
+              data <- exprs(data)
+              callGeneric(data = data,
+                          family = family,
+                          hypotheses = hypotheses, ...)
+
+          })
+
+
+setMethod("emfit",
+          signature(data = "ExpressionSet",
                     family = "ebarraysFamily",
                     hypotheses = "ebarraysPatterns"),
 

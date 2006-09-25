@@ -34,18 +34,11 @@ createExprSet <-
     ## Phenodata
     replicates <- data.frame(replicates = factor(scan(repfile, quiet = TRUE)))
 
-    ## initially planned to create exprSet, but let's skip that till
-    ## we decide whether we want to depend on bioconductor. Let this
-    ## be just a matrix for now, where the repfile is essentially
-    ## ignored. Not really used anywhere anyway, so not a big deal.
-
     ## Create and return object of class exprSet 
     new("exprSet", exprs = as.matrix(int.data),
         phenoData = new("phenoData", pData = replicates,
         varLabels = list(replicates = "Replicates")))
 
-    ## back to exprSet
-    ##as.matrix(int.data)
 }
 
 

@@ -81,6 +81,17 @@ setMethod("postprob",
           })
 
 
+setMethod("postprob",
+          signature(fit = "ebarraysEmFit", data = "ExpressionSet"),
+
+          function(fit, data) {
+
+              data <- exprs(data)
+              callGeneric(fit = fit, data = data)
+
+          })
+
+
 
 ## add another (simple) method for the semiparametric fit later
 
