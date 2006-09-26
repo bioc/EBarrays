@@ -2,6 +2,8 @@
 \alias{emfit}
 \alias{emfit,exprSet,character,ebarraysPatterns-method}
 \alias{emfit,exprSet,ebarraysFamily,ebarraysPatterns-method}
+\alias{emfit,ExpressionSet,character,ebarraysPatterns-method}
+\alias{emfit,ExpressionSet,ebarraysFamily,ebarraysPatterns-method}
 \alias{emfit,matrix,character,ebarraysPatterns-method}
 \alias{emfit,matrix,ebarraysFamily,ebarraysPatterns-method}
 \alias{show,ebarraysEmFit-method}
@@ -27,7 +29,7 @@ emfit(data,
       optim.control = list())
 }
 \arguments{
-  \item{data}{ a matrix or an an object of class ``exprSet''}
+  \item{data}{ a matrix or an an object of class \code{"exprSet"} or \code{"ExpressionSet"}}
   \item{family}{
     an object of class ``ebarraysFamily'' or a characterstring which can
     be coerced to one. Currently, only the characters "GG" and "LNN" are

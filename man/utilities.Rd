@@ -40,7 +40,7 @@ ebPatterns(x)
 }
 
 \value{
-  \code{createExprSet} creates an object of class ``exprSet''.
+  \code{createExprSet} creates an object of class \code{"exprSet"}.
 
   \code{ebPatterns} creates an Object of class ``ebarraysPatterns'', to
   be used in other functions such as \code{\link{emfit}}. This is

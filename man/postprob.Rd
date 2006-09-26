@@ -1,6 +1,7 @@
 \name{postprob}
 \alias{postprob}
 \alias{postprob,ebarraysEmFit,exprSet-method}
+\alias{postprob,ebarraysEmFit,ExpressionSet-method}
 \alias{postprob,ebarraysEmFit,matrix-method}
 \alias{show,ebarraysPostProb-method}
 \alias{ebarraysPostProb-class}
@@ -14,7 +15,8 @@ postprob(fit, data, ...)
 }
 \arguments{
   \item{fit}{ output from \code{\link{emfit}}}
-  \item{data}{ a nunmeric matrix or an object of class ``exprSet''
+  \item{data}{ a nunmeric matrix or an object of class \code{"exprSet"}
+    or \code{"ExpressionSet"}
     containing the data, typically the same one used in the \code{emfit}
     fit supplied below.
   }

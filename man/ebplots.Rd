@@ -21,7 +21,7 @@ checkModel(data, model = c("gamma", "lognormal"),
 checkConvergence(\dots, dropfirst = FALSE)
 }
 \arguments{
-  \item{data}{ data, as a ``matrix'' or ``exprSet''}
+  \item{data}{ data, as a \code{"matrix"}, \code{"exprSet"} or \code{"ExpressionSet"}}
   \item{useRank}{ logical. If \code{TRUE}, ranks of means and c.v.-s are
     used in the scatterplot
   }
