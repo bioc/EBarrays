@@ -6,6 +6,10 @@
 %\VignetteKeywords{Parametric Empirical Bayes}
 %\VignettePackage{EBarrays}
 
+
+\SweaveOpts{keep.source=TRUE}
+
+
 \documentclass[12pt]{article}
 
 \usepackage{amsmath}
@@ -390,7 +394,8 @@ considered in the analysis. The patterns are entered as
 
 
 <<read2patterns>>=
-pattern <- ebPatterns(c("1,1,1,0,0,0,0,0,0,0","1,2,2,0,0,0,0,0,0,0"))
+pattern <- ebPatterns(c("1,1,1,0,0,0,0,0,0,0",
+                        "1,2,2,0,0,0,0,0,0,0"))
 
 pattern
 @ 
@@ -494,16 +499,15 @@ gg.em.out
 
 gg.post.out <- postprob(gg.em.out, gould)
 
-sum(gg.post.out[,2]>0.5)
+sum(gg.post.out[,2] > 0.5)
 
-lnn.em.out <- emfit(gould, family = "LNN", pattern, 
-                    num.iter = 10)
+lnn.em.out <- emfit(gould, family = "LNN", pattern, num.iter = 10)
 lnn.em.out
 
 lnn.post.out <- postprob(lnn.em.out, gould)
 
-sum(lnn.post.out[,2]>0.5)
-sum(gg.post.out[,2]>0.5&lnn.post.out[,2]>0.5)
+sum(lnn.post.out[,2] > 0.5)
+sum(gg.post.out[,2] > 0.5 & lnn.post.out[,2] > 0.5)
 
 @
 
@@ -572,8 +576,8 @@ The pattern matrix for the four group analysis is now given by
 <<>>=
 pattern4 <- ebPatterns(c("1, 1, 1, 1, 1, 1, 1, 1, 1, 1", 
                          "1, 2, 2, 2, 2, 2, 2, 2, 2, 2", 
-                         "1,2,2,1,1,1,1,1,2,2", 
-                         "1,1,1,1,1,1,1,1,2,2"))
+                         "1, 2, 2, 1, 1, 1, 1, 1, 2, 2", 
+                         "1, 1, 1, 1, 1, 1, 1, 1, 2, 2"))
 pattern4
 @ 
 
@@ -610,10 +614,12 @@ id's for 10 are shown. Figures \ref{fig:marg-gg4} and
 \\
 
 <<fourgcont>>=
-sum(gg4.post.out[,2]>0.5)
-sum(lnn4.post.out[,2]>0.5)
-sum(gg4.post.out[,2]>0.5&lnn4.post.out[,2]>0.5)
-gene.ids <- geneNames(gould)[gg4.post.out[,2]>0.5&lnn4.post.out[,2]>0.5]
+sum(gg4.post.out[,2] > 0.5)
+sum(lnn4.post.out[,2] > 0.5)
+sum(gg4.post.out[,2] > 0.5 & lnn4.post.out[,2] > 0.5)
+gene.ids <- 
+    geneNames(gould)[ gg4.post.out[,2] > 0.5 & 
+                     lnn4.post.out[,2] > 0.5 ]
 gene.ids[1:10]
 @ 
 

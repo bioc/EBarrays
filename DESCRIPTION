@@ -1,6 +1,6 @@
 Package: EBarrays
-Version: 1.7.0
-Date: 2006/09/25
+Version: 1.7.1
+Date: 2007/04/19
 Title: Empirical Bayes for Microarrays
 Author: Christina Kendziorski, Michael Newton and Deepayan Sarkar
 Maintainer: Deepayan Sarkar <deepayan@stat.wisc.edu>
