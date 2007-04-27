@@ -21,6 +21,6 @@
 
 
 .First.lib <- function(lib, pkg) {
-    library.dynam(pkg, pkg, lib )
+    library.dynam("EBarrays", pkg, lib)
 }
 
