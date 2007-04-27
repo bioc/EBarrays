@@ -19,8 +19,7 @@
 ### Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
 ### MA 02111-1307, USA
 
-
 .First.lib <- function(lib, pkg) {
-    library.dynam(pkg, pkg, lib )
+    library.dynam("EBarrays", pkg, lib)
 }
 
