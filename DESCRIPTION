@@ -9,5 +9,5 @@ Description: EBarrays provides tools for the analysis of replicated
 Depends: R (>= 2.4.0), Biobase (>= 1.11.0), methods, utils, lattice
 LazyLoad: yes
 License: GPL Version 2.0 or later.
-SaveImage: yes
+LazyLoad: yes
 biocViews: Statistics, DifferentialExpression, Microarray
