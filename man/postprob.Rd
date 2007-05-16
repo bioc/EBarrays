@@ -30,7 +30,7 @@ postprob(fit, data, ...)
   these hypotheses.
 }
 \seealso{
-  \code{\link{emfit}}}
+  \code{\link{emfit}}
 }
 \author{ Christina Kendziorski, Michael Newton and Deepayan Sarkar}
 \keyword{models}
