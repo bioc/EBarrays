@@ -1,3 +1,5 @@
+crit.fun                Find posterior probability threshold to control
+                        FDR
 ebarraysFamily-class    Class of Families to be used in the EBarrays
                         package
 ebplots                 Various plotting routines in the EBarrays
