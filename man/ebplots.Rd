@@ -25,7 +25,7 @@ plotCluster(fit, data, cond = NULL, ncolors = 123, sep=TRUE,
 \S3method{plot}{ebarraysEMfit}(x, data, plottype="cluster", \dots)
 }
 \arguments{
-  \item{data}{ data, as a ``matrix'' or ``exprSet''}
+  \item{data}{ data, as a ``matrix'' or ``ExpressionSet''}
   \item{useRank}{ logical. If \code{TRUE}, ranks of means and c.v.-s are
     used in the scatterplot
   }

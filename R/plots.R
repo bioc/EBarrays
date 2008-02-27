@@ -3,7 +3,7 @@ checkCCV <- function(data, useRank = FALSE, f = 1/2)
     cv <- function(x) {
         return(sqrt(var(x))/mean(x))
     }
-    if (is(data, "exprSet") || is(data, "ExpressionSet"))
+    if (is(data, "ExpressionSet"))
         data <- exprs(data)
     means <- apply(data, 1, mean)
     cvs <- apply(data, 1, cv)
@@ -30,7 +30,7 @@ checkModel <- function(data, fit, model = c("gamma", "lognormal", "lnnmv"),
                        number = 9, nb = 10, cluster=1, groupid=NULL){
   if (!require(lattice, quietly = TRUE)) stop("The lattice package could not be loaded")
   model <- match.arg(model)
-  if (is(data, "exprSet") || is(data, "ExpressionSet")) data <- exprs(data)
+  if (is(data, "ExpressionSet")) data <- exprs(data)
   
   flag <- apply(data<=0,1,sum)
   data <- data[flag==0,]
@@ -109,7 +109,7 @@ checkModel <- function(data, fit, model = c("gamma", "lognormal", "lnnmv"),
 
 checkVarsQQ <- function(data, groupid, ...){
   if (!require(lattice, quietly = TRUE)) stop("The lattice package could not be loaded")
-  if (is(data, "exprSet") || is(data, "ExpressionSet")) data <- exprs(data)
+  if (is(data, "ExpressionSet")) data <- exprs(data)
   flag <- apply(data<=0,1,sum)
   data <- data[flag==0,]
   data <- log(data)
@@ -149,7 +149,7 @@ checkVarsQQ <- function(data, groupid, ...){
 
 checkVarsMar <- function (data, groupid, xlab, ylab, ...){
   if (!require(lattice, quietly = TRUE)) stop("The lattice package could not be loaded")
-  if (is(data, "exprSet") || is(data, "ExpressionSet")) data <- exprs(data)
+  if (is(data, "ExpressionSet")) data <- exprs(data)
 
   # density of scaled inverse chi-square distribution
   dsichisq <- function(x, df, scale){
@@ -206,7 +206,7 @@ checkVarsMar <- function (data, groupid, xlab, ylab, ...){
 plotMarginal <- function (fit, data, kernel = "rect", n = 100, bw = "nrd0", adjust = 1, xlab, ylab, ...)
 {
 
-    ## Input: data is a matrix or exprSet. fit is the
+    ## Input: data is a matrix or ExpressionSet. fit is the
     ## output from emfit
 
     ## Output: Plot comparing the marginal distribution under the
@@ -222,7 +222,7 @@ plotMarginal <- function (fit, data, kernel = "rect", n = 100, bw = "nrd0", adju
 
     n.cluster<-dim(fit@thetaEst)[1]
 
-    if (is(data, "exprSet") || is(data, "ExpressionSet")) data <- exprs(data)
+    if (is(data, "ExpressionSet")) data <- exprs(data)
 
     flag <- apply(data<=0,1,sum)
     data <- data[flag==0,]

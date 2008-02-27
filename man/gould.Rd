@@ -1,7 +1,7 @@
 \name{gould}
 \alias{gould}
 \non_function{}
-\title{ A dataset of class exprSet  }
+\title{A dataset of class matrix}
 \usage{data(gould)}
 \format{
   The data are originally from Affymetrix chips, subsequently processed

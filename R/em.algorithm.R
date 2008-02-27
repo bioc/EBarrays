@@ -318,7 +318,7 @@ emfit1<-function(data,
                  optim.control = list(),
                  ...) {
 
-              if (is(data, "exprSet") || is(data, "ExpressionSet")) data<-exprs(data)
+              if (is(data, "ExpressionSet")) data<-exprs(data)
               
               family <- as(family, "ebarraysFamily")
               
@@ -540,7 +540,7 @@ emfit2<-function(data,
                  optim.control = list(),
                  ...) {
 
-              if (is(data, "exprSet") || is(data, "ExpressionSet")) data<-exprs(data)
+              if (is(data, "ExpressionSet")) data<-exprs(data)
               
               family <- as(family, "ebarraysFamily")
               

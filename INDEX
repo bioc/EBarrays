@@ -6,7 +6,7 @@ ebplots                 Various plotting routines in the EBarrays
                         package
 emfit                   Implements EM algorithm for gene expression
                         mixture model
-gould                   A dataset of class exprSet
+gould                   A dataset of class matrix
 postprob                Calculates posterior probabilities for
                         expression patterns
 utilities               Utility functions for the EBarrays package

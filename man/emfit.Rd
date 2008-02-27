@@ -1,7 +1,7 @@
 \name{emfit}
 \alias{emfit}
-\alias{emfit,exprSet,character,ebarraysPatterns-method}
-\alias{emfit,exprSet,ebarraysFamily,ebarraysPatterns-method}
+\alias{emfit,ExpressionSet,character,ebarraysPatterns-method}
+\alias{emfit,ExpressionSet,ebarraysFamily,ebarraysPatterns-method}
 \alias{emfit,matrix,character,ebarraysPatterns-method}
 \alias{emfit,matrix,ebarraysFamily,ebarraysPatterns-method}
 \alias{show,ebarraysEMfit-method}
@@ -100,8 +100,8 @@ emfit(data,
   \code{\link{ebPatterns}}, \code{\link{ebarraysFamily-class}}
 }
 \examples{
-data(sample.exprSet.1) ## from Biobase
-eset<-exprs(sample.exprSet.1)
+data(sample.ExpressionSet) ## from Biobase
+eset <- exprs(sample.ExpressionSet)
 patterns <- ebPatterns(c("1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
                          "1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2"))
 gg.fit <- emfit(data = eset, family = "GG", hypotheses = patterns, verbose = TRUE)

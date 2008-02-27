@@ -1,6 +1,6 @@
 \name{postprob}
 \alias{postprob}
-\alias{postprob,ebarraysEMfit,exprSet-method}
+\alias{postprob,ebarraysEMfit,ExpressionSet-method}
 \alias{postprob,ebarraysEMfit,matrix-method}
 \alias{show,ebarraysPostProb-method}
 \alias{ebarraysPostProb-class}
@@ -14,7 +14,7 @@ postprob(fit, data, ...)
 }
 \arguments{
   \item{fit}{ output from \code{\link{emfit}}}
-  \item{data}{ a numeric matrix or an object of class ``exprSet''
+  \item{data}{ a numeric matrix or an object of class ``ExpressionSet''
     containing the data, typically the same one used in the \code{emfit}
     fit supplied below.
   }
@@ -62,14 +62,14 @@ postprob(fit, data, ...)
 
 }
 \seealso{
-  \code{\link{emfit}}}
+  \code{\link{emfit}}
 }
 \examples{
-data(sample.exprSet.1) ## from Biobase
-eset<-exprs(sample.exprSet.1)
+data(sample.ExpressionSet) ## from Biobase
+eset <- exprs(sample.ExpressionSet)
 patterns <- ebPatterns(c("1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
                          "1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2"))
 gg.fit <- emfit(data = eset, family = "GG", hypotheses = patterns, verbose = TRUE)
-prob<-postprob(gg.fit,eset)
+prob <- postprob(gg.fit,eset)
 }
 \keyword{models}

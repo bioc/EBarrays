@@ -316,7 +316,7 @@ possible to create new instances, using the description given in
 \code{help("ebarraysFamily-class")}.
 \\
 
-The data can be supplied either as a matrix, or as an \code{``exprSet''} object.
+The data can be supplied either as a matrix, or as an \code{``ExpressionSet''} object.
 It is expected that the data be normalized intensity values, with
 rows representing genes and columns representing chips.
 Furthermore, the data must be on the raw scale (not on a logarithmic scale). 
@@ -329,7 +329,7 @@ experimental conditions. The columns (arrays) within a group are
 assumed to be replicates obtained under the same experimental
 conditions, and thus to have the same mean expression level across
 arrays for each gene. This information is usually contained in the \\
-\code{``phenoData''} slot of an \code{``exprSet''} object.
+\code{``phenoData''} from an \code{``ExpressionSet''} object.
 \\
 
 As an example, consider a hypothetical dataset with $I=10$ arrays
