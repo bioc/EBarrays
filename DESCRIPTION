@@ -5,5 +5,5 @@ Title: Unified Approach for Simultaneous Gene Clustering and Differential Expres
 Author:  Ming Yuan, Christina Kendziorski, Michael Newton and Deepayan Sarkar
 Maintainer: Ming Yuan <myuan@isye.gatech.edu>
 Description:  EBarrays provides tools for the analysis of replicated/unreplicated microarray data.
-Depends: R (>= 1.8.0), Biobase, utils, lattice, cluster
+Depends: R (>= 1.8.0), Biobase, utils, lattice, cluster, methods
 License: GPL (>= 2)
