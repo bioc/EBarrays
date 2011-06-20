@@ -2,7 +2,7 @@ Package: EBarrays
 Version: 2.17.0
 Date: 2007/09/20
 Title: Unified Approach for Simultaneous Gene Clustering and Differential Expression Identification
-Author:  Ming Yuan, Christina Kendziorski, Michael Newton and Deepayan Sarkar
+Author:  Ming Yuan, Michael Newton, Deepayan Sarkar and Christina Kendziorski
 Maintainer: Ming Yuan <myuan@isye.gatech.edu>
 Description:  EBarrays provides tools for the analysis of replicated/unreplicated microarray data.
 Depends: R (>= 1.8.0), Biobase, lattice, methods

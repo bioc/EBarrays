@@ -27,7 +27,7 @@
 \begin{document}
 
 \title{Parametric Empirical Bayes Methods for Microarrays}
-\author{Ming Yuan, Ping Wang, Deepayan Sarkar, Michael Newton \\
+\author{Ming Yuan, Deepayan Sarkar, Michael Newton \\
 and Christina Kendziorski}
 \maketitle
 \tableofcontents
